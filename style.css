@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('/images/ai-generated-8136170_1920.png') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed; /* Ensures background stays fixed while scrolling */
+    color: white; /* Default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically and horizontally */
+    text-align: center; /* Center text */
+}
+
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(0, 76, 255);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 76, 255);
+    font-weight: bold;
+    font-size: 1.875rem; /* 30px */
+}
+
+nav ul li a:hover {
+    color: white;
+}.text-container {
+    z-index: 2;
+    padding: 20px;
+    max-width: 80%; /* Ensure text doesn't stretch too far */
+    position: absolute; /* Absolute positioning to allow centering */
+    top: 50%; /* Position it vertically in the middle */
+    left: 50%; /* Position it horizontally in the middle */
+    transform: translate(-50%, -50%); /* Adjust by -50% to truly center */
+    text-align: center; /* Ensures text is centered inside the container */
+}
+
+
+
+.text-container h1 {
+    margin-bottom: 60px;
+    font-weight: bold;
+    font-size: 3.4375rem; /* 55px */
+    color: white; /* Changed to white for better contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to improve visibility */
+}
+
+.text-container p {
+    font-weight: bold;
+    font-size: 2.5rem; /* 40px */
+    line-height: 1.6;
+    color: whitesmoke; /* Changed to white for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Added shadow for text clarity */
+}
+
+/* Overlay behind the text */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for contrast */
+    z-index: 1;
+}
+
+.img-container {
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.hero {
+    margin-top: 0;
+    padding-top: 20px;
+}
+.author-name {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 2rem; /* Small font size */
+    color: rgba(255, 255, 255, 0.7); /* Light white with some transparency */
+    font-family: 'Arial', sans-serif; /* Elegant font family */
+    font-style: italic; /* Italic style to make it look more personal */
+    letter-spacing: 1px; /* Adds a little space between letters */
+    z-index: 3; /* Ensure it's above other elements */
+}
+
+
+
+
+
