@@ -1,120 +1,150 @@
+/* Reset and Basic Styles */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body, html {
     height: 100%;
     font-family: Arial, sans-serif;
-    background: url('/images/ai-generated-8136170_1920.png') no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: fixed; /* Ensures background stays fixed while scrolling */
-    color: white; /* Default text color */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center content vertically and horizontally */
-    text-align: center; /* Center text */
 }
 
+/* Background Image */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('/images/ai-generated-8136170_1920.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Dark Overlay */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
 header {
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: rgb(0, 76, 255);
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 10;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(81, 255, 0);
+    z-index: 3;
 }
 
 header nav ul {
     display: flex;
-    gap: 35px;
+    gap: 25px;
     list-style: none;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(0, 76, 255);
+    color: rgb(81, 255, 0);
     font-weight: bold;
-    font-size: 1.875rem; /* 30px */
+    font-size: 20px;
 }
 
 nav ul li a:hover {
-    color: white;
-}.text-container {
-    z-index: 2;
-    padding: 20px;
-    max-width: 80%; /* Ensure text doesn't stretch too far */
-    position: absolute; /* Absolute positioning to allow centering */
-    top: 50%; /* Position it vertically in the middle */
-    left: 50%; /* Position it horizontally in the middle */
-    transform: translate(-50%, -50%); /* Adjust by -50% to truly center */
-    text-align: center; /* Ensures text is centered inside the container */
+    color: red;
 }
 
-
+/* Centered Text */
+.text-container {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    max-width: 80%;
+}
 
 .text-container h1 {
-    margin-bottom: 60px;
+    font-size: 2.5rem;
     font-weight: bold;
-    font-size: 3.4375rem; /* 55px */
-    color: white; /* Changed to white for better contrast */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to improve visibility */
+    color: white;
 }
 
 .text-container p {
+    font-size: 1.7rem;
+    margin: 10px 0;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background: rgb(81, 255, 0);
+    color: black;
     font-weight: bold;
-    font-size: 2.5rem; /* 40px */
-    line-height: 1.6;
-    color: whitesmoke; /* Changed to white for better contrast */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Added shadow for text clarity */
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: 0.3s ease;
 }
 
-/* Overlay behind the text */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for contrast */
-    z-index: 1;
+.cta-button:hover {
+    background: red;
+    color: white;
 }
 
-.img-container {
-    width: 60%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 30px;
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    z-index: 3;
+    position: relative;
 }
 
-.img-container img {
-    width: 100%;
-    border-radius: 15px;
+.feature-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
 }
 
-.hero {
-    margin-top: 0;
-    padding-top: 20px;
-}
+/* Author Name */
 .author-name {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    font-size: 2rem; /* Small font size */
-    color: rgba(255, 255, 255, 0.7); /* Light white with some transparency */
-    font-family: 'Arial', sans-serif; /* Elegant font family */
-    font-style: italic; /* Italic style to make it look more personal */
-    letter-spacing: 1px; /* Adds a little space between letters */
-    z-index: 3; /* Ensure it's above other elements */
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    letter-spacing: 1px;
+    z-index: 3;
 }
 
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
 
+footer a {
+    color: rgb(81, 255, 0);
+    text-decoration: none;
+}
 
-
-
+footer a:hover {
+    color: red;
+}
